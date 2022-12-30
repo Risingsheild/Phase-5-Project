@@ -1,0 +1,2 @@
+class PerscriptionsController < ApplicationController
+end
