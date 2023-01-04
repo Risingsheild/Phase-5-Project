@@ -61,7 +61,7 @@ end
 
 puts 'now prescriptions..'
     5.times do 
-        Perscription.create(
+        Prescription.create(
         lisinopril: rand(1..3), 
         amoxicillin: rand(1..3), 
         atorvastatin: rand(1..3), 

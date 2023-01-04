@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :perscriptions, only: [:index]
+  resources :prescriptions, only: [:index]
   resources :departments, only: [:index]
   resources :doctors, only: [:index, :show]
   resources :patients, only: [:index, :show, :create, :destroy]
