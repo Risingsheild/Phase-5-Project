@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-
+import './Navbar.css'
 function Navbar({ user, setUser }) {
   function handleLogout() {
     fetch("/logout", {
@@ -8,8 +8,8 @@ function Navbar({ user, setUser }) {
   }
 
   return (
-    <div className="nav-bar">
-      <nav>
+    <header>
+      <nav className="nav-bar">
         <Link to="/">
           <h1> Pharmacy </h1>
         </Link>
@@ -25,7 +25,7 @@ function Navbar({ user, setUser }) {
           )}
         </div>
       </nav>
-    </div>
+    </header>
   );
 }
 

@@ -1,8 +1,14 @@
+import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
+import NavBar from "./Components/NavBar/NavBar";
 
 function App() {
   return (
-    <Login/>
+    <div>
+      <Home />
+      <Login />
+      <NavBar />
+    </div>
   );
 }
 
