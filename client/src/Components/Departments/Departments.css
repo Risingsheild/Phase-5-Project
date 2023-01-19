@@ -1,0 +1,15 @@
+.the-departments{
+    margin-top: auto;
+    margin-bottom: 100px;
+}
+.departments{
+    column-count: 3;
+    gap: 20px;
+    column-rule-style: solid;
+    column-rule-width: 3px;
+  }
+  .dept:hover{
+    color: rgb(49, 106, 177);
+    background-color: rgb(242, 194, 158);
+    outline-color: rgb(49, 106, 177);
+  }
