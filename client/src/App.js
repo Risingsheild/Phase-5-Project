@@ -13,6 +13,7 @@ import About from "./Components/About/About";
 import Departments from "./Components/Departments/Departments";
 import Doctor from "./Components/Doctors/Doctor";
 import DepartmentDoctor from "./Components/DepartmentDoctor/DepartmentDoctor.js";
+import Portal from "./Components/Portal/Portal.js";
 
 function App() {
   const dispatch = useDispatch()
@@ -38,6 +39,7 @@ function App() {
             <Route exact path="/departments" element={<Departments departments={departments} setDept={setDept}/>}/>
             <Route exact path="/departments/:id" element={<DepartmentDoctor dept={dept} doctors={doctors} setDoc={setDoc}/> }/>
             <Route exact path='/doctors/:id' element={<Doctor doc={doc}/>}/>
+            <Route exact path='/portal' element={<Portal user={user}/>}/>
           </Routes>
         <About />
     </div>
