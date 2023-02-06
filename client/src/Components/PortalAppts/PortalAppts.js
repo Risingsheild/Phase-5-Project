@@ -1,4 +1,6 @@
 import Portal from "../Portal/Portal";
+import ApptCard from "./ApptCard";
+import './PortalAppts.css'
 
 function PortalAppts({ patientAppts, user }) {
   return (
@@ -6,7 +8,7 @@ function PortalAppts({ patientAppts, user }) {
       <Portal user={user} />
       <div className="appt-list">
         {patientAppts.map((appt) => {
-          return <li> {appt} </li>;
+          return <ApptCard key={appt.id} appt={appt} />;
         })}
       </div>
     </div>
