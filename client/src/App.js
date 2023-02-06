@@ -18,6 +18,7 @@ import Doctor from "./Components/Doctors/Doctor.js";
 import DepartmentDoctor from "./Components/DepartmentDoctor/DepartmentDoctor.js";
 import Portal from "./Components/Portal/Portal.js";
 import PortalAppts from "./Components/PortalAppts/PortalAppts.js";
+import PortalPatients from "./Components/PortalPatients/PortalPatients.js";
 
 function App() {
   const dispatch = useDispatch()
@@ -25,6 +26,7 @@ function App() {
   const [dept, setDept] = useState(null)
   const [doc, setDoc] = useState(null)
   const [patientAppts, setPatientAppts] = useState([])
+  const [patientNames, setPatientNames] = useState([])
 
 
   useEffect(() =>{
@@ -41,7 +43,24 @@ function App() {
   const appointments = useSelector(state => state.appointments.entities)
   const prescriptions = useSelector(state => state.prescriptions.entities)
 
-  
+  useEffect(() => {
+    if(user && !user.doc){
+      setPatientAppts(appointments.filter(appt => appt.patient_id === user.id))
+    } 
+    if(user && user.doc){
+      setPatientNames(patients.map(p => ({id: p.id, text: p.name})))
+    }
+  }, [user])
+
+  function filterPatients(){
+    if (search === ''){
+      return patients
+    } else {
+      return patients.filter(p => p.name.toLowerCase().includes(search.toLowerCase()))
+    }
+  }
+
+
 
   return (
     <div className="App">
@@ -54,6 +73,7 @@ function App() {
             <Route exact path='/doctors/:id' element={<Doctor doc={doc}/>}/>
             <Route exact path='/portal' element={<Portal user={user}/>}/>
             <Route exact path="/portal/appointments" element={<PortalAppts patientAppts={patientAppts} user={user}/>}/>
+            <Route exact path='/portal/patients' element={<PortalPatients patients={filterPatients()} docAppointments={appointments} search={search} setSearch={setSearch} user={user} />}/>
           </Routes>
         <About />
     </div>
