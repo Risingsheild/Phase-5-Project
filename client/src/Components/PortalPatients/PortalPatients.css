@@ -12,10 +12,10 @@
   }
   
   .patientSearch{
-    color: #fff;
+    color: rgb(49, 106, 177);
     outline: 2px solid #fff;
     padding: 5px 10px;
-    background-color: transparent;
+    background-color:  rgb(49, 106, 177);
     border-color: transparent;
     font-size: large;
     margin-left: 5px;

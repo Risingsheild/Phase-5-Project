@@ -127,7 +127,7 @@ function Login({ setUser }) {
               value={loginData.password}
             ></input>
             <br></br>
-            {error ? <p className="error">{error}</p> : null}
+            {errors ? <p className="error">{errors}</p> : null}
             <br></br>
             <br></br>
             <button
@@ -201,7 +201,7 @@ function Login({ setUser }) {
               type="password"
               onChange={(e) => setcPassword(e.target.value)}
             ></input>
-            {errors ? errors.map((e) => <p className="error">{e}</p>) : null}
+            {errors ? errors.map((e) => <h3 className="error">{e}</h3>) : null}
             <br></br>
             <br></br>
             <br></br>

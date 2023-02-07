@@ -19,6 +19,9 @@ import Portal from "./Components/Portal/Portal.js";
 import PortalAppts from "./Components/PortalAppts/PortalAppts.js";
 import PortalPatients from "./Components/PortalPatients/PortalPatients.js";
 
+
+import './App.css'
+
 function App() {
   const dispatch = useDispatch()
   const [user, setUser] = useState(null);

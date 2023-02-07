@@ -50,7 +50,7 @@
   padding: 5px 30px;
   border: 2px solid rgb(49, 106, 177);
   position: relative;
-  left: 150px;
+  left: 60px;
   transform: translate(-50%, -50%);
 }
 .button::before,
@@ -103,7 +103,7 @@
 
 .error {
   color: red;
-  background-color: white;
+  
   font-size: large;
 }
 .input::placeholder{
