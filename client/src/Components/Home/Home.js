@@ -1,8 +1,10 @@
 import { MdLocalPharmacy, MdMedication } from "react-icons/md";
 import './Home.css'
+import  About from '../About/About'
 
 function Home() {
   return (
+    <div>
     <div className="information">
       <h1>
         <MdLocalPharmacy />
@@ -14,8 +16,14 @@ function Home() {
       <h1> <MdMedication /> </h1>
       <p> 
         With over 15 pharmacist in the Flatiron System you will always have available appts that are best suited with your schedule
-      </p>
+      </p> 
     </div>
+      <br></br>
+     <footer className="about">
+      <About />
+     </footer>
+</div>
+
   );
 }
 

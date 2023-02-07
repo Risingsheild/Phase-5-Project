@@ -29,9 +29,8 @@ function PatientCard({ patient, docAppointments }) {
             return (
               <ul key={appt.id} className={expand ? "expanded" : "collapsed"}>
                 <h3>
-                  {appt.startDate.split("-")[1]}/
-                  {appt.startDate.split("-")[2].split("T")[0]}/
-                  {appt.startDate.split("-")[0]}:
+                  {appt.startDate.split("-")[1]}/ 
+                  {appt.startDate.split("-")[2].split("T")[0]}
                 </h3>
                 <li>{appt.title}</li>
                 <li>Room: {appt.location}</li>

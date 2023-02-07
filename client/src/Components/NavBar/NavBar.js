@@ -11,10 +11,10 @@ function Navbar({ user, setUser }) {
     <header>
       <nav className="nav-bar">
         <Link to="/">
-          <h1> Pharmacy </h1>
+          <h1> Pharmacy </h1> 
+          <NavLink to="/departments"> Pharmacy Departments</NavLink>
         </Link>
         <div className="navlinks">
-          <NavLink to="/departments"> Pharmacy Departments </NavLink>
           <NavLink to="/portal"> {user ? "Portal" : null}</NavLink>
           {user ? (
             <NavLink to="/" onClick={handleLogout}>

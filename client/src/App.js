@@ -12,7 +12,6 @@ import { fetchPrescriptions } from './TableSlices/prescriptionsSlice.js'
 import Home from "./Components/Home/Home.js";
 import Login from "./Components/Login/Login.js";
 import NavBar from "./Components/NavBar/NavBar.js";
-import About from "./Components/About/About.js";
 import Departments from "./Components/Departments/Departments.js";
 import Doctor from "./Components/Doctors/Doctor.js";
 import DepartmentDoctor from "./Components/DepartmentDoctor/DepartmentDoctor.js";
@@ -27,6 +26,7 @@ function App() {
   const [doc, setDoc] = useState(null)
   const [patientAppts, setPatientAppts] = useState([])
   const [patientNames, setPatientNames] = useState([])
+  const [search, setSearch] = useState('')
 
 
   useEffect(() =>{
@@ -75,7 +75,7 @@ function App() {
             <Route exact path="/portal/appointments" element={<PortalAppts patientAppts={patientAppts} user={user}/>}/>
             <Route exact path='/portal/patients' element={<PortalPatients patients={filterPatients()} docAppointments={appointments} search={search} setSearch={setSearch} user={user} />}/>
           </Routes>
-        <About />
+        
     </div>
   );
 }

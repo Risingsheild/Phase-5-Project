@@ -15,9 +15,11 @@ function ApptCard({ appt }) {
           className={expand ? "bttn-clicked" : "bttn"}
           onClick={handleClick}
         >
+          Appt is on 
+          <br></br>
           {appt.startDate.split("-")[1]}/
-          {appt.startDate.split("-")[2].split("T")[0]}/
-          {appt.startDate.split("-")[0]}: <br></br> {appt.title}
+          {appt.startDate.split("-")[2]}
+          <br></br> {appt.title}
           <span className={expand ? "hamburger cross" : "hamburger"}>
             <span className="line line--top"></span>
             <span className="line line--middle"></span>
@@ -27,6 +29,7 @@ function ApptCard({ appt }) {
       </div>
       <div className="collapsible">
         <ul key={appt.id} className={expand ? "expanded" : "collapsed"}>
+          <li>Location: {appt.location} </li>
           <li>Notes: {appt.notes}</li>
         </ul>
       </div>

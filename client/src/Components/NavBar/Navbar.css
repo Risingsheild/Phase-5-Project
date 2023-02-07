@@ -6,8 +6,14 @@ nav {
 }
 
 .navlinks {
-  margin: 0 0.5rem;
-  position: relative;
+  margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 30px;
+    height: 30px;
+    vertical-align: middle;
 }
 .nav-bar a {
   text-decoration: none;
@@ -28,7 +34,7 @@ nav {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: rgb(242, 194, 158) f;
+  background-color: rgb(242, 194, 158);
   transform-origin: right;
   transition: transform 0.25s ease-out;
 }
@@ -36,7 +42,7 @@ nav {
   transform: scaleX(1);
   transform-origin: left;
 }
-.navlinks a.active {
+.nav-bar a.active {
   color: rgb(242, 194, 158);
   border-bottom: 2px solid rgb(242, 194, 158);
 }
