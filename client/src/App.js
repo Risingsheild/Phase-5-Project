@@ -77,6 +77,7 @@ function App() {
             <Route exact path='/portal' element={<Portal user={user}/>}/>
             <Route exact path="/portal/appointments" element={<PortalAppts patientAppts={patientAppts} user={user}/>}/>
             <Route exact path='/portal/patients' element={<PortalPatients patients={filterPatients()} docAppointments={appointments} search={search} setSearch={setSearch} user={user} />}/>
+            <Route path = '/portal/calendar' element={<PortalCalendar docAppointments={appointments} user={user} patientAppts={patientAppts} patients={patients} patientNames={patientNames} />}/>
           </Routes>
         
     </div>
