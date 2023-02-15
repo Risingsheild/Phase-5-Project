@@ -13,12 +13,11 @@ function Portal({ user }) {
       {user.doc ? (
         <div className="navlinks">
           <NavLink to="/portal/patients"><BsFillFilePersonFill/>Patients</NavLink>
-          <NavLink to="/portal/calender"><SlCalender/> Calender </NavLink>
+          <NavLink to="/portal/calendar"><SlCalender/> Calendar </NavLink>
         </div>
       ) : (
         <div className="navlinks">
             <NavLink to='/portal/prescriptions'><FaPrescriptionBottleAlt/>My Prescriptions</NavLink>
-            <NavLink to="/portal/calender"><SlCalender/>Calender </NavLink>
             <NavLink to='/portal/appointments'><AiOutlineSchedule/> My Appointments</NavLink>
         </div>
       )}

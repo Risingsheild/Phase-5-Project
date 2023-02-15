@@ -60,7 +60,6 @@ puts 'now appointments...'
 end
 
 puts 'now prescriptions..'
-    5.times do 
         Prescription.create(
         lisinopril: rand(1..3), 
         amoxicillin: rand(1..3), 
@@ -73,6 +72,20 @@ puts 'now prescriptions..'
         duration: "For #{ rand(1..6) } weeks", 
         patient_id: 1
         )
+
+        10.times do 
+            Prescription.create(
+            lisinopril: rand(1..3), 
+            amoxicillin: rand(1..3), 
+            atorvastatin: rand(1..3), 
+            hydrocodone: rand(1..3),
+            albuterol: rand(1..3), 
+            metformin: rand(1..3), 
+            levothyroxine: rand(1..3), 
+            simvastatin: rand(1..3), 
+            duration: "For #{ rand(1..6) } weeks", 
+            patient_id: rand(2..15)
+            )
     end
 
     puts 'seeding done'

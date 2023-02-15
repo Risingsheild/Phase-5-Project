@@ -18,9 +18,10 @@ import DepartmentDoctor from "./Components/DepartmentDoctor/DepartmentDoctor.js"
 import Portal from "./Components/Portal/Portal.js";
 import PortalAppts from "./Components/PortalAppts/PortalAppts.js";
 import PortalPatients from "./Components/PortalPatients/PortalPatients.js";
-
+import PortalCalender from "./Components/PortalCalender.js";
 
 import './App.css'
+import Prescriptions from "./Components/Prescriptions/Prescriptions.js";
 
 function App() {
   const dispatch = useDispatch()
@@ -77,7 +78,8 @@ function App() {
             <Route exact path='/portal' element={<Portal user={user}/>}/>
             <Route exact path="/portal/appointments" element={<PortalAppts patientAppts={patientAppts} user={user}/>}/>
             <Route exact path='/portal/patients' element={<PortalPatients patients={filterPatients()} docAppointments={appointments} search={search} setSearch={setSearch} user={user} />}/>
-            <Route path = '/portal/calendar' element={<PortalCalendar docAppointments={appointments} user={user} patientAppts={patientAppts} patients={patients} patientNames={patientNames} />}/>
+            <Route exact path = '/portal/calendar' element={<PortalCalender docAppointments={appointments} user={user} patientAppts={patientAppts} patients={patients} patientNames={patientNames} />}/>
+            <Route exact path = '/portal/prescriptions' element={<Prescriptions user={user} prescriptions={prescriptions}/>}/>
           </Routes>
         
     </div>
