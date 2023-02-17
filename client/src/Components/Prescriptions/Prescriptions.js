@@ -1,5 +1,6 @@
 import Portal from "../Portal/Portal";
 import PrescriptionsCard from "./PrescriptionCard";
+import "./Prescriptions.css";
 
 function Prescriptions({ user, prescriptions }) {
   const myPrescriptions = prescriptions

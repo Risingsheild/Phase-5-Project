@@ -53,7 +53,8 @@ puts 'now appointments...'
         patient_id: rand(1..Patient.all.size),
         title: Faker::Movie.title,
         location: Faker::Address.full_address,
-        startDate: Faker::Time.forward(days: 28),
+        startDate: DateTime.new(2023,3,rand(1..31),rand(7..18),rand(1..60)),
+        endDate: DateTime.new(2023,3,rand(1..31),rand(9..19),rand(1..60)),
         notes: Faker::Cannabis.health_benefit
 
     )

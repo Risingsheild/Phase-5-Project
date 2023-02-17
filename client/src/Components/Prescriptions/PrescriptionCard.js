@@ -1,6 +1,8 @@
+import "./Prescriptions.css";
+
 function PrescriptionsCard({ prescriptions }) {
   return (
-    <div>
+    <div className="prescription-table">
       <table>
         <tr className="table-header">
           <th>Prescription Name</th>
@@ -38,7 +40,7 @@ function PrescriptionsCard({ prescriptions }) {
           <td>simvastatin</td>
           <td>{prescriptions.simvastatin}</td>
         </tr>
-       <h3>All Prescriptions should be taken {prescriptions.duration}</h3>
+        <h3>All Prescriptions should be taken {prescriptions.duration}</h3>
       </table>
     </div>
   );
