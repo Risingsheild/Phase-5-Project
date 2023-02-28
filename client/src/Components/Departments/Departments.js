@@ -3,29 +3,24 @@ import { MdElderly } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import "./Departments.css";
 
-function Departments({ departments, setDept }) {
+function Departments({ departments }) {
   const navigate = useNavigate()
-
-  function handleDeptClick(dept) {
-    setDept(departments.filter(d => d.id === dept.id))
-    navigate(`/departments/${dept.id}`);
-  }
 
   return (
     <div className="the-departments">
       <h1>Our Departments:</h1>
       <div className="departments">
-        <h3 className="dept" onClick={() => {handleDeptClick(departments[0])}}>
+        <h3 className="dept" onClick={() => navigate(`/departments/${1}`)}>
           <GiTumor />
-          {departments[0].name}
+          Oncology Pharmacy
         </h3>
-        <h3 className="dept" onClick={() => {handleDeptClick(departments[1])}}>
+        <h3 className="dept" onClick={() => navigate(`/departments/${2}`)}>
           <MdElderly />
-          {departments[1].name}
+          Geriatrics Pharmacy
         </h3>
-        <h3 className="dept" onClick={() => {handleDeptClick(departments[2])}}>
+        <h3 className="dept" onClick={() => navigate(`/departments/${3}`)}>
           <GiFamilyTree />
-          {departments[2].name}
+          Family Pharmacy
         </h3>
       </div>
     </div>

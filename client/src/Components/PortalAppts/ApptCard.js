@@ -17,8 +17,7 @@ function ApptCard({ appt }) {
         >
           Appt is on 
           <br></br>
-          {appt.startDate.split("-")[1]}/
-          {appt.startDate.split("-")[2]}
+          {appt.startDate}
           <br></br> {appt.title}
           <span className={expand ? "hamburger cross" : "hamburger"}>
             <span className="line line--top"></span>

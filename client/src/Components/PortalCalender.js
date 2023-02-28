@@ -26,7 +26,7 @@ import {
   ConfirmationDialog,
 } from "@devexpress/dx-react-scheduler-material-ui";
 
-function PortalCalender({ user, patientNames, patientAppts, docAppointments }) {
+function PortalCalender({ user, patientNames, docAppointments }) {
   const dispatch = useDispatch();
   const [month, setMonth] = useState("Month");
   const [date, setDate] = useState("2023-02-11");
@@ -98,8 +98,6 @@ function PortalCalender({ user, patientNames, patientAppts, docAppointments }) {
   return (
     <div>
       <Portal user={user} />
-
-      {user.doc ? (
         <Paper>
           <Scheduler data={docAppointments} height={700} startDate={"string"}>
             <ViewState
@@ -129,28 +127,6 @@ function PortalCalender({ user, patientNames, patientAppts, docAppointments }) {
             />
           </Scheduler>
         </Paper>
-      ) : (
-        <Paper>
-          <Scheduler data={patientAppts} height={600} startDate={"string"}>
-            <ViewState
-              currentDate={date}
-              onCurrentDateChange={(date) => setDate(date)}
-              currentViewName={month}
-              onCurrentViewNameChange={(month) => setMonth(month)}
-            />
-            <WeekView startDayHour={7} endDayHour={24} />
-            <MonthView />
-            <DayView />
-            <EditRecurrenceMenu />
-            <ConfirmationDialog />
-            <Toolbar />
-            <DateNavigator />
-            <ViewSwitcher />
-            <Appointments />
-            <AppointmentTooltip />
-          </Scheduler>
-        </Paper>
-      )}
     </div>
   );
 }

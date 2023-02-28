@@ -38,7 +38,7 @@ password: "123", doc: false)
     Patient.create(
         name: Faker::Name.name,
         age: rand(18..65),
-        birthdate: Faker::Date.birthday(min_age: 18, max_age: 65),
+        birthdate: Faker::Date.birthday(min_age: 18, max_age: 85),
         email: Faker::Internet.free_email,
         password: Faker::Internet.password,
         doc: false
@@ -46,19 +46,17 @@ password: "123", doc: false)
 end
 
 puts 'now appointments...'
-
-25.times do 
-    Appointment.create(
-        doctor_id: 1,
-        patient_id: rand(1..Patient.all.size),
-        title: Faker::Movie.title,
-        location: Faker::Address.full_address,
-        startDate: DateTime.new(2023,3,rand(1..31),rand(7..18),rand(1..60)),
-        endDate: DateTime.new(2023,3,rand(1..31),rand(9..19),rand(1..60)),
-        notes: Faker::Cannabis.health_benefit
-
-    )
-end
+        15.times do
+            Appointment.create(
+              doctor_id: 1,
+              patient_id: rand(1..Patient.all.size),
+              title: Faker::Movie.title,
+              location: Faker::Address.full_address,
+              startDate: DateTime.new(2023,3,rand(1..30),rand(1..19),rand(1.60)),
+              endDate: DateTime.new(2023,3,rand(1..30),rand(6..19),rand(1.60)),
+              notes: Faker::Cannabis.health_benefit
+            )
+          end
 
 puts 'now prescriptions..'
         Prescription.create(
@@ -73,20 +71,6 @@ puts 'now prescriptions..'
         duration: "For #{ rand(1..6) } weeks", 
         patient_id: 1
         )
-
-        10.times do 
-            Prescription.create(
-            lisinopril: rand(1..3), 
-            amoxicillin: rand(1..3), 
-            atorvastatin: rand(1..3), 
-            hydrocodone: rand(1..3),
-            albuterol: rand(1..3), 
-            metformin: rand(1..3), 
-            levothyroxine: rand(1..3), 
-            simvastatin: rand(1..3), 
-            duration: "For #{ rand(1..6) } weeks", 
-            patient_id: rand(2..15)
-            )
     end
 
     puts 'seeding done'

@@ -6,7 +6,7 @@ function PrescriptionsCard({ prescriptions }) {
       <table>
         <tr className="table-header">
           <th>Prescription Name</th>
-          <th>Prescription Quantity</th>
+          <th>Refills </th>
         </tr>
         <tr className="row">
           <td>Lisinopril</td>
@@ -33,11 +33,11 @@ function PrescriptionsCard({ prescriptions }) {
           <td>{prescriptions.metformin}</td>
         </tr>
         <tr className="row">
-          <td>Evothyroxine</td>
+          <td>Levothyroxine</td>
           <td>{prescriptions.levothyroxine}</td>
         </tr>
         <tr className="row">
-          <td>simvastatin</td>
+          <td>Simvastatin</td>
           <td>{prescriptions.simvastatin}</td>
         </tr>
         <h3>All Prescriptions should be taken {prescriptions.duration}</h3>

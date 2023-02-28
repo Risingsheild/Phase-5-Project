@@ -9,7 +9,7 @@ function DepartmentDoctor({ dept, setDoc, doctors }) {
   }
   return (
     <div className="doctor-profile">
-      <h1 className="dept-title"> {dept[0].name}</h1>
+      <h1 className="dept-title"> {dept.name}</h1>
       <img src={dept[0].image} alt="img" className="image" />
       <div className="doc-list">
         <h3> Department Doctors: </h3>
