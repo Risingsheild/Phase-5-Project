@@ -3,8 +3,9 @@ import { MdElderly } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import "./Departments.css";
 
-function Departments({ departments }) {
+function Departments({departments}) {
   const navigate = useNavigate()
+
 
   return (
     <div className="the-departments">
@@ -12,15 +13,15 @@ function Departments({ departments }) {
       <div className="departments">
         <h3 className="dept" onClick={() => navigate(`/departments/${1}`)}>
           <GiTumor />
-          Oncology Pharmacy
+          {departments[0].name} Pharmacy
         </h3>
         <h3 className="dept" onClick={() => navigate(`/departments/${2}`)}>
           <MdElderly />
-          Geriatrics Pharmacy
+          {departments[1].name} Pharmacy
         </h3>
         <h3 className="dept" onClick={() => navigate(`/departments/${3}`)}>
           <GiFamilyTree />
-          Family Pharmacy
+          {departments[2].name} Pharmacy
         </h3>
       </div>
     </div>

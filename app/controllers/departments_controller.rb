@@ -6,4 +6,10 @@ class DepartmentsController < ApplicationController
         render json: Department.all, status: :ok
     end
     
+
+    def show 
+        department = Department.find(params[:id])
+        render json: department
+    end
+    
 end

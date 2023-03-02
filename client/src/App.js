@@ -35,7 +35,7 @@ function App() {
 
   useEffect(() =>{
     dispatch(fetchAppointments())
-    .then(fetchDepartments())
+    .then(dispatch(fetchDepartments()))
     .then(dispatch(fetchDoctors()))
     .then(dispatch(fetchPatients()))
     .then(dispatch(fetchPrescriptions()))
