@@ -46,10 +46,21 @@ password: "123", doc: false)
 end
 
 puts 'now appointments...'
-        15.times do
+3.times do
+    Appointment.create(
+      doctor_id: 1,
+      patient_id: 1,
+      title: Faker::Movie.title,
+      location: Faker::Address.full_address,
+      startDate: DateTime.new(2023,3,rand(1..30),rand(1..19),rand(1.60)),
+      endDate: DateTime.new(2023,3,rand(1..30),rand(6..19),rand(1.60)),
+      notes: Faker::Cannabis.health_benefit
+    )
+  end
+        10.times do
             Appointment.create(
               doctor_id: 1,
-              patient_id: rand(1..Patient.all.size),
+              patient_id: rand(2..Patient.all.size),
               title: Faker::Movie.title,
               location: Faker::Address.full_address,
               startDate: DateTime.new(2023,3,rand(1..30),rand(1..19),rand(1.60)),

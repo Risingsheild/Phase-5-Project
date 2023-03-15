@@ -40,7 +40,7 @@ function PrescriptionsCard({ prescriptions }) {
           <td>Simvastatin</td>
           <td>{prescriptions.simvastatin}</td>
         </tr>
-        <h3>All Prescriptions should be taken {prescriptions.duration}</h3>
+        <h3 style={{color: 'aqua'}}>All Prescriptions should be taken {prescriptions.duration}</h3>
       </table>
     </div>
   );

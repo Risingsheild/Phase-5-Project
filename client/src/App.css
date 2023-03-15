@@ -1,5 +1,8 @@
 .App {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: grey;
+  background-image: url('https://media.istockphoto.com/id/1446669792/vector/caduceus-logo-design-vector-illustration-health-logo.jpg?s=612x612&w=0&k=20&c=bS8wcTRSC1e8a9BJoLQH9vyW3PQxhAN7VvkBtJLl48E=');
+ background-size: contain;
+ background-repeat: round;
+
 }
